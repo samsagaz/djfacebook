@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apps.base',
+
 ]
 
 MIDDLEWARE = [
@@ -118,3 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Defines personalized auth.user
+AUTH_USER_MODEL = 'base.PyUser'
+# LOGIN_URL = 'base:login'
+# LOGIN_REDIRECT_URL = 'base:home'
+# LOGOUT_REDIRECT_URL = 'base:login'
